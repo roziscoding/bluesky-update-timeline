@@ -7,6 +7,7 @@ definePageMeta({
 })
 
 const runtimeConfig = useRuntimeConfig()
+const appConfig = useAppConfig()
 const likeStore = useLikeStore()
 const serviceWorkerReady = ref(false)
 const route = useRoute()
@@ -212,10 +213,10 @@ useSeoMeta({
     <PWAInstructions id="pwa-dialog" v-model:visible="showPwaInstructions" />
     <header class="header mt-12">
       <h1 class="nes-text is-primary text-center py-4">
-        Updates
+        {{ appConfig.title }}
       </h1>
       <p class="nes-text is-disabled text-center pb-4">
-        Informações sobre o estado de saúde do Roz<br>
+        {{ appConfig.subtitle }}
       </p>
     </header>
     <main class="md:mx-24 flex flex-col gap-4 text-xs md:text-base">
@@ -259,9 +260,3 @@ useSeoMeta({
     </main>
   </div>
 </template>
-
-<style scoped>
-body {
-  background-color: #212529
-}
-</style>

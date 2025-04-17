@@ -47,6 +47,10 @@ export default defineNuxtConfig({
       }
     },
   },
+  appConfig: {
+    title: 'Updates',
+    subtitle: 'Updates sobre alguma coisa'
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@vite-pwa/nuxt',
