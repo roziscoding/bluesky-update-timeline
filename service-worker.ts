@@ -27,7 +27,7 @@ self.addEventListener('push', (event) => {
     const notificationOptions = {
       body: data.message,
       tag: data.tag,
-      data: { url: `/updates/${data.tag}` },
+      data: { url: `/${data.tag}` },
     }
 
     // Use Promise.resolve() to ensure we're not waiting for any async operations
@@ -44,7 +44,7 @@ self.addEventListener('push', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   // Get the URL from the notification data
-  const url = event.notification.data?.url || `/updates/${event.notification.tag}`
+  const url = event.notification.data?.url || `/${event.notification.tag}`
 
   event.notification.close()
 
