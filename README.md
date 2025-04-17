@@ -10,6 +10,7 @@ Você pode encontrá-lo em [roziscoding/health-updates-server](https://github.co
 
 ## Executando
 
+1. Altere o título e subtítulo da página inicial através das propriedades `appConfig.title` e `appConfig.subtitle` no arquivo [`nuxt.config.ts`](./nuxt.config.ts).
 1. Copie o arquivo `.env.sample` para `.env`:
     ```sh
     cp .env.sample .env
