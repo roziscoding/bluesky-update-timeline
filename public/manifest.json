@@ -1,0 +1,60 @@
+{
+  "name": "",
+  "short_name": "",
+  "description": "",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "pt",
+  "scope": "/",
+  "id": "",
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "orientation": "portrait",
+  "screenshots": [
+    {
+      "src": "",
+      "sizes": "",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "",
+      "url": "",
+      "description": ""
+    }
+  ],
+  "categories": [],
+  "related_applications": []
+}
