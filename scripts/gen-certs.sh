@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [ -f localhost.key ]; then
+    exit 0
+fi
+
 openssl req -x509 -out localhost.crt -keyout localhost.key \
   -newkey rsa:2048 -nodes -sha256 \
   -subj '/CN=localhost' -extensions EXT -config <( \

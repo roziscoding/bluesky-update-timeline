@@ -70,12 +70,6 @@ export default defineNuxtConfig({
     },
     manifest: false,
   },
-  devServer: {
-    https: {
-      cert: './localhost.crt',
-      key: './localhost.key',
-    },
-  },
   ogImage: {
     fonts: ['Press+Start+2P'],
   },

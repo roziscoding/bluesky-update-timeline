@@ -11,9 +11,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "dev:certs": "./scripts/gen-certs.sh",
-    "dev:tunnel": "pnpm build && concurrently 'pnpm preview' 'cloudflared tunnel --url http://localhost:3000'",
-    "prepare": "./generate_certificate.sh"
+    "prepare": "./scripts/gen-certs.sh",
+    "dev:tunnel": "pnpm build && concurrently 'pnpm preview' 'cloudflared tunnel --url http://localhost:3000'"
   },
   "dependencies": {
     "@khmyznikov/pwa-install": "^0.5.4",

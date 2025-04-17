@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+# Bluesky Update Timeline
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Website simples que usei quando tava internado pra postar updates via bluesky pra minha família e amigos.
 
-## Setup
+## Back-end
 
-Make sure to install dependencies:
+Essa aplicação depende de um back-end para realizar o envio de notificações push e gerenciar os posts curtidos.
+O código do back-end é escrito em TypeScript e projetado pra ser executado no Deno Deploy.
+Você pode encontrá-lo em [roziscoding/health-updates-server](https://github.com/roziscoding/health-updates-server/).
 
-```bash
-# npm
-npm install
+## Executando
 
-# pnpm
-pnpm install
+1. Copie o arquivo `.env.sample` para `.env`:
+    ```sh
+    cp .env.sample .env
+    ```
+1. Preencha as variáveis de ambiente conforme descrito nos comentários do arquivo
+1. Instale as dependências:
+    ```sh
+    pnpm i
+    ```
+1. Adicione o certificado `localhost.cert`, que foi gerado na raiz do repositório, aos certificados confiados pelo seu sistema operacional.
+1. Execute em modo de desenvolvimento:
+    ```sh
+    pnpm run dev
+    ```
+1. Acesse aplicação em https://localhost:3000/
 
-# yarn
-yarn install
+## Por que HTTPS?
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+PWAs não possuem todas as funcionalidades quando acessados via sem HTTP.
+Era pra ter uma exceção nesse sentido pro domínio `localhost` mas comigo não funcionou.
